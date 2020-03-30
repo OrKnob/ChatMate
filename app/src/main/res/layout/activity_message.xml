@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageActivity"
+    android:background="#BBB7B7"
+    android:id="@+id/rootView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/ll1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/profile_image"
+            android:layout_weight="0.15"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="23sp"
+            android:text="Username"
+            android:id="@+id/tvUsername"
+            android:textColor="#000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="status"
+                android:layout_marginTop="2dp"
+                android:textSize="15sp"
+                android:id="@+id/tvStatus"
+                android:visibility="invisible"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding = "10dp"
+        android:id="@+id/ll2"
+        >
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:id="@+id/etMessage"
+            android:background="#fff"
+            android:layout_weight="1"
+            android:hint="Type a Message"
+            android:textColor="#000"
+            android:textColorHint="#8D8A8A"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:textSize="19dp"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnSend"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="0.3"
+            android:src="@drawable/send"
+            app:backgroundTint="@color/colorPrimaryDark"
+            android:layout_gravity="center_vertical"/>
+
+
+
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rvMessage"
+        android:layout_below="@+id/ll1"
+        android:layout_above="@+id/ll2"/>
+
+
+
+</RelativeLayout>

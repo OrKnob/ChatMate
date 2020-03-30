@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp"
+
+    >
+<RelativeLayout
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_send"
+        android:text="Hello"
+        android:textSize="21dp"
+        android:textColor="#fff"
+        android:padding="6dp"
+        android:id="@+id/showMessage"
+        android:layout_alignParentEnd="true"
+        android:longClickable="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSeen"
+        android:layout_below="@+id/showMessage"
+        android:layout_alignParentEnd="true"
+        android:text="seen"
+
+
+        />
+</RelativeLayout>
+
+</RelativeLayout>
